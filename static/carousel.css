@@ -5,9 +5,18 @@
 body {
   padding-top: 3rem;
   padding-bottom: 3rem;
-  color: #5a5a5a;
+  color: #bbbbbb;
+  background-color: #212529;
 }
 
+.navbar-nav {
+  position: absolute;
+  right: 3%;
+}
+
+.navbar-brand {
+  margin-left: 15px;
+}
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
@@ -55,7 +64,7 @@ body {
 ------------------------- */
 
 .featurette-divider {
-  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+  margin: 3rem 0; /* Space out the Bootstrap <hr> more */
 }
 
 /* Thin out the marketing headings */
