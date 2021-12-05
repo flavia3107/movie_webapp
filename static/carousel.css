@@ -6,7 +6,7 @@ body {
   padding-top: 3rem;
   padding-bottom: 3rem;
   color: #bbbbbb;
-  background-color: #212529;
+  background-color: #2b2f33;
 }
 
 .navbar-nav {
@@ -28,18 +28,22 @@ body {
 .carousel-caption {
   bottom: 3rem;
   z-index: 10;
+  text-align: right;
+  right: 0%;
+  background: #35353596;
+  padding-right: 170px;
 }
 
 /* Declare heights because of positioning of img element */
 .carousel-item {
-  height: 32rem;
+  height: 55rem;
 }
 .carousel-item > img {
   position: absolute;
   top: 0;
   left: 0;
   min-width: 100%;
-  height: 32rem;
+  height: 55rem;
 }
 
 /* MARKETING CONTENT
@@ -93,6 +97,6 @@ body {
 
 @media (min-width: 62em) {
   .featurette-heading {
-    margin-top: 7rem;
+    margin-top: 4rem;
   }
 }

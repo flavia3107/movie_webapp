@@ -14,6 +14,11 @@ def reserve():
 def movie():
     return render_template("movie.html")
 
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
+
 # @app.route("/path")
 # def test():
 # return redirect(url_for("movie", var=varMew))
