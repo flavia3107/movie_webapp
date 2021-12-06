@@ -5,8 +5,9 @@
 body {
   padding-top: 3rem;
   padding-bottom: 3rem;
-  color: #bbbbbb;
-  background-color: #2b2f33;
+  color: #959393;
+  /* color: #bbbbbb; */
+  /* background-color: #2b2f33; */
 }
 
 .navbar-nav {
