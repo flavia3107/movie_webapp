@@ -1,4 +1,4 @@
-from flask import Flask, redirect, url_for, render_template
+from flask import Flask, redirect, url_for, render_template, request
 
 app = Flask(__name__)
 
@@ -18,7 +18,17 @@ def movie():
 def about():
     return render_template("about.html")
 
+@app.route("/sailing")
+def sailing():
+    return render_template("sailing.html")
 
+@app.route("/highlights")
+def highlights():
+    return render_template("highlights.html")
+
+@app.route("/walking")
+def walking():
+    return render_template("walking.html")
 # @app.route("/path")
 # def test():
 # return redirect(url_for("movie", var=varMew))
