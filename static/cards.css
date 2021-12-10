@@ -341,3 +341,25 @@ a:hover {
     );
   }
 }
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.call-to-action {
+  background: transparent;
+  color: white;
+  width: 120px;
+  height: 41px;
+  border-color: white;
+  position: relative;
+  left: 304px;
+  top: 31px;
+  font-size: 20px;
+  font-weight: bolder;
+  cursor: pointer;
+}

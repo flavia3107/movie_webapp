@@ -1,0 +1,25 @@
+.modal-dialog {
+  width: 1000px;
+  position: relative;
+  /* right: 10%; */
+  right: 200px;
+}
+
+.modal-body {
+  padding: 0px !important;
+  width: 1000px;
+}
+.close {
+  position: absolute;
+  right: -30px;
+  top: 0;
+  z-index: 999;
+  font-size: 2rem;
+  font-weight: normal;
+  color: #fff;
+  opacity: 1;
+}
+
+.modal-content {
+  width: 1000px !important;
+}

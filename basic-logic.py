@@ -10,13 +10,15 @@ def home():
 def reserve():
     return render_template("reserve.html")
 
-@app.route("/movie")
-def movie():
-    return render_template("movie.html")
 
 @app.route("/about")
 def about():
     return render_template("about.html")
+
+
+@app.route("/register")
+def register():
+    return render_template("register.html")
 
 @app.route("/sailing")
 def sailing():

@@ -1,52 +1,55 @@
 {% extends "layout.html" %} {% block title %} About Albanian Tourism {%
 endblock%} {% block main %}
-<!-- 
+
 <div class="container" style="margin-top: 90px">
   <div class="row">
+    <h1
+      class="h1 text-center"
+      style="color: rgb(224, 224, 224)"
+      id="pageHeaderTitle"
+    >
+      Sailing Albania “Ionian Riviera”
+    </h1>
+    <button class="call-to-action">Join Us</button>
     <div class="col-lg-12">
       <h3 class="text-center"></h3>
-      <p>
-        Start and end in Saranda! With the Sailing tour Sailing Albania “Ionian
-        Riviera” Route - (From Saranda), you have a 7 days tour package taking
+      <pre style="color: rgb(224, 224, 224)">
+        Start and end in Saranda!
+        With the Sailing tour Sailing Albania “Ionian Riviera” Route - (From Saranda), you have a 7 days tour package taking
         you through Saranda, Albania and 6 other destinations in Albania.
-        Sailing Albania “Ionian Riviera” Route - (From Saranda) includes ,
-        transport and more.Our Sailing Yachts are traditionally-built, wooden
-        motor-yachts which usually hold around 7-8 passengers. We strongly feel
-        that they are the ONLY way to see the Albania coasts – imagine waking
-        every morning for breakfast and a swim in idyllic bays and cruising
-        along the coast to a new destination each day. The decks are perfect for
-        sunbathing and jumping into the sea, the food is excellent and there is
-        a tender boat included to shuttle you to and from all the sites such as
-        Saranda Bay, Ksamil islands, Kakome Bay, Porto Palermo Bay –
-        ex-Submarine Base, Himara, Jale, Dhermi beach, Pirates’ Cave, Sazan
-        Island, General Bay in Sazan (island), and several ancient/medieval
-        ruins. Of course, it’s not all about just relaxing and sightseeing.
-        There is an onboard bar and opportunities to experience the nightlife
-        and party at venues such as Saranda, Ksamil, Himara, Vlora, etc. Sounds
-        like the perfect trip? You bet it is, and with prices starting at €999
-        per person for a 7-day cruise with full-board (breakfast, lunch and
-        dinner included), it is incredible value! The full itinerary for Ionian
-        Riviera Route is below: Arrival/Departure Airports Ground Transfers to
-        Saranda port: - From Tirana Airport to Saranda port ground transfer (275
-        km, 3 h 55 min). - From Corfu Airport to Corfu port ground transfer (4.5
-        km, 12 min) - From Corfu Port to Saranda ferry boat transfer (29.9 km, 1
-        h 30 min) or fast ferry 45 min.
-      </p>
+        
+        Sailing Albania “Ionian Riviera” Route - (From Saranda) includes transport and more.
+        Our Sailing Yachts are traditionally-built, wooden motor-yachts which usually hold around 7-8 passengers. We strongly feel
+        that they are the ONLY way to see the Albania coasts – imagine waking every morning for breakfast and a swim in idyllic
+        bays and cruising along the coast to a new destination each day. 
+        The decks are perfect for sunbathing and jumping into the sea, the food is excellent and there is a tender boat included to 
+        shuttle you to and from all the sites such as Saranda Bay, Ksamil islands, Kakome Bay, Porto Palermo Bay – ex-Submarine 
+        Base, Himara, Jale, Dhermi beach, Pirates’ Cave, Sazan Island, General Bay in Sazan (island), and several ancient/medieval
+        ruins. 
+        
+        Of course, it’s not all about just relaxing and sightseeing.
+        There is an onboard bar and opportunities to experience the nightlife and party at venues such as Saranda, Ksamil, Himara, 
+        Vlora, etc. 
+        
+        Sounds like the perfect trip? 
+        You bet it is, and with prices starting at €999 per person for a 7-day cruise with full-board (breakfast, lunch and dinner 
+        included), it is incredible value! The full itinerary for Ionian Riviera Route is below: Arrival/Departure Airports Ground 
+        Transfers to Saranda port: 
+        - From Tirana Airport to Saranda port ground transfer (275km, 3 h 55 min). 
+        - From Corfu Airport to Corfu port ground transfer (4.5km, 12 min) - From Corfu Port to Saranda ferry boat transfer 
+        (29.9 km, 1h 30 min) or fast ferry 45 min.
+      </pre>
     </div>
   </div>
-</div> -->
+</div>
 
 <section class="dark">
   <div class="container py-4">
-    <h1 class="h1 text-center" id="pageHeaderTitle">
-      Sailing Albania “Ionian Riviera”
-    </h1>
-
     <article class="postcard dark blue">
       <a class="postcard__img_link" href="#">
         <img
           class="postcard__img"
-          src="https://picsum.photos/1000/1000"
+          src="../static/krorez.jpg"
           alt="Image Title"
         />
       </a>
@@ -68,10 +71,16 @@ endblock%} {% block main %}
           overnight.
         </div>
         <ul class="postcard__tagbox">
-          <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
-          <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
           <li class="tag__item play blue">
-            <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+            <button
+              type="button"
+              class="btn btn-primary video-btn"
+              data-toggle="modal"
+              data-src="https://www.youtube.com/embed/1AI99gfFciY"
+              data-target="#myModal"
+            >
+              Play Episode
+            </button>
           </li>
         </ul>
       </div>
@@ -80,7 +89,7 @@ endblock%} {% block main %}
       <a class="postcard__img_link" href="#">
         <img
           class="postcard__img"
-          src="https://picsum.photos/501/500"
+          src="../static/palermo.jpg"
           alt="Image Title"
         />
       </a>
@@ -102,10 +111,16 @@ endblock%} {% block main %}
           will also spend the night.
         </div>
         <ul class="postcard__tagbox">
-          <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
-          <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
           <li class="tag__item play red">
-            <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+            <button
+              type="button"
+              class="btn btn-primary video-btn"
+              data-toggle="modal"
+              data-src="https://www.youtube.com/embed/xSHjmLugfVE"
+              data-target="#myModal"
+            >
+              Play Episode
+            </button>
           </li>
         </ul>
       </div>
@@ -114,7 +129,7 @@ endblock%} {% block main %}
       <a class="postcard__img_link" href="#">
         <img
           class="postcard__img"
-          src="https://picsum.photos/500/501"
+          src="../static/grames.jpg"
           alt="Image Title"
         />
       </a>
@@ -138,10 +153,16 @@ endblock%} {% block main %}
           Overnight.
         </div>
         <ul class="postcard__tagbox">
-          <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
-          <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
           <li class="tag__item play green">
-            <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+            <button
+              type="button"
+              class="btn btn-primary video-btn"
+              data-toggle="modal"
+              data-src="https://www.youtube.com/embed/jmPAgM4LpZw"
+              data-target="#myModal"
+            >
+              Play Episode
+            </button>
           </li>
         </ul>
       </div>
@@ -150,7 +171,7 @@ endblock%} {% block main %}
       <a class="postcard__img_link" href="#">
         <img
           class="postcard__img"
-          src="https://picsum.photos/501/501"
+          src="../static/sazan.jpg"
           alt="Image Title"
         />
       </a>
@@ -184,10 +205,16 @@ endblock%} {% block main %}
           with a charming little harbor where we spend the night.
         </div>
         <ul class="postcard__tagbox">
-          <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
-          <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
           <li class="tag__item play yellow">
-            <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+            <button
+              type="button"
+              class="btn btn-primary video-btn"
+              data-toggle="modal"
+              data-src="https://www.youtube.com/embed/FXYcwtADHuU"
+              data-target="#myModal"
+            >
+              Play Episode
+            </button>
           </li>
         </ul>
       </div>
@@ -199,15 +226,11 @@ endblock%} {% block main %}
   <div class="container py-2">
     <article class="postcard light blue">
       <a class="postcard__img_link" href="#">
-        <img
-          class="postcard__img"
-          src="https://picsum.photos/1000/1000"
-          alt="Image Title"
-        />
+        <img class="postcard__img" src="../static/jale.jpg" alt="Image Title" />
       </a>
       <div class="postcard__text t-dark">
         <h1 class="postcard__title blue">
-          <a href="#">Gjiri i Grames - Jale</a>
+          <a href="#">&nbsp;Gjiri i Grames - Jale</a>
         </h1>
         <div class="postcard__subtitle small">
           <time datetime="2020-05-25 12:00:00">
@@ -232,10 +255,16 @@ endblock%} {% block main %}
           club).
         </div>
         <ul class="postcard__tagbox">
-          <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
-          <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
           <li class="tag__item play blue">
-            <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+            <button
+              type="button"
+              class="btn btn-primary video-btn"
+              data-toggle="modal"
+              data-src="https://www.youtube.com/embed/cQgkPfgiuwo"
+              data-target="#myModal"
+            >
+              Play Episode
+            </button>
           </li>
         </ul>
       </div>
@@ -244,7 +273,7 @@ endblock%} {% block main %}
       <a class="postcard__img_link" href="#">
         <img
           class="postcard__img"
-          src="https://picsum.photos/501/500"
+          src="../static/lukove.jpg"
           alt="Image Title"
         />
       </a>
@@ -278,10 +307,16 @@ endblock%} {% block main %}
           beachy tastes. Overnight at Lukova Beach.
         </div>
         <ul class="postcard__tagbox">
-          <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
-          <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
           <li class="tag__item play red">
-            <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+            <button
+              type="button"
+              class="btn btn-primary video-btn"
+              data-toggle="modal"
+              data-src="https://www.youtube.com/embed/-OHNyPe7EPY"
+              data-target="#myModal"
+            >
+              Play Episode
+            </button>
           </li>
         </ul>
       </div>
@@ -290,48 +325,17 @@ endblock%} {% block main %}
       <a class="postcard__img_link" href="#">
         <img
           class="postcard__img"
-          src="https://picsum.photos/500/501"
+          src="../static/ksamil.jpg"
           alt="Image Title"
         />
       </a>
       <div class="postcard__text t-dark">
-        <h1 class="postcard__title green"><a href="#">Ksamil - Saranda.</a></h1>
+        <h1 class="postcard__title green">
+          <a href="#"> &nbsp;Ksamil - Saranda.</a>
+        </h1>
         <div class="postcard__subtitle small">
           <time datetime="2020-05-25 12:00:00">
             <i class="fas fa-calendar-alt mr-2"></i>Day 7: Saturday
-          </time>
-        </div>
-        <div class="postcard__bar"></div>
-        <div class="postcard__preview-txt">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
-          fugiat asperiores inventore beatae accusamus odit minima enim, commodi
-          quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti
-          tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci
-          illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim
-          quidem excepturi, illum quos!
-        </div>
-        <ul class="postcard__tagbox">
-          <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
-          <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
-          <li class="tag__item play green">
-            <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
-          </li>
-        </ul>
-      </div>
-    </article>
-    <article class="postcard light yellow">
-      <a class="postcard__img_link" href="#">
-        <img
-          class="postcard__img"
-          src="https://picsum.photos/501/501"
-          alt="Image Title"
-        />
-      </a>
-      <div class="postcard__text t-dark">
-        <h1 class="postcard__title yellow"><a href="#">Podcast Title</a></h1>
-        <div class="postcard__subtitle small">
-          <time datetime="2020-05-25 12:00:00">
-            <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
           </time>
         </div>
         <div class="postcard__bar"></div>
@@ -362,10 +366,16 @@ endblock%} {% block main %}
           before the transfer continues to other destinations (Tirana, etc.)
         </div>
         <ul class="postcard__tagbox">
-          <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
-          <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
-          <li class="tag__item play yellow">
-            <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+          <li class="tag__item play green">
+            <button
+              type="button"
+              class="btn btn-primary video-btn"
+              data-toggle="modal"
+              data-src="https://www.youtube.com/embed/GM-wri27VGE"
+              data-target="#myModal"
+            >
+              Play Episode
+            </button>
           </li>
         </ul>
       </div>
