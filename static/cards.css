@@ -353,13 +353,12 @@ a:hover {
 .call-to-action {
   background: transparent;
   color: white;
-  width: 120px;
-  height: 41px;
-  border-color: white;
+  border: 2px solid white;
   position: relative;
+  padding: 16px;
   left: 304px;
-  top: 31px;
+  top: 0px;
   font-size: 20px;
-  font-weight: bolder;
-  cursor: pointer;
+  height: 64px;
+  z-index: 100000;
 }
