@@ -1,28 +1,41 @@
 from flask import Flask, render_template, request, redirect
 from datetime import datetime
+import mysql.connector
+from mysql.connector import errorcode
+
 # import MySQLdb
 # import sshtunnel
 
 app = Flask(__name__)
+app.config['PROPAGATE_EXCEPTIONS'] = True
 
+try:
+    mydb = mysql.connector.connect( 
+        user="sql11459575",
+        password="8RWAvpjBuH",
+        host="sql11.freemysqlhosting.net",
+        port=3306,
+        database="sql11459575"
+    )
+except mysql.connector.Error as err:
+  if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
+    print("Something is wrong with your user name or password")
+  elif err.errno == errorcode.ER_BAD_DB_ERROR:
+    print("Database does not exist")
+  else:
+    print(err)
+# else:
+#   mydb.close()
 
+# CREATE TABLE `bookings` (
+#  `id` int(11) NOT NULL,
+#  `firstname` varchar(40) NOT NULL,
+#  `lastname` varchar(40) NOT NULL,
+#  `package` varchar(30) NOT NULL,
+#  `email` text NOT NULL,
+#  `phone_number` text NOT NULL
+# ) ENGINE=InnoDB DEFAULT CHARSET=latin1
 
-# sshtunnel.SSH_TIMEOUT = 5.0
-# sshtunnel.TUNNEL_TIMEOUT = 5.0
-
-# with sshtunnel.SSHTunnelForwarder(
-#     ('your SSH hostname'),
-#     ssh_username='your PythonAnywhere username', ssh_password='the password you use to log in to the PythonAnywhere website',
-#     remote_bind_address=('your PythonAnywhere database hostname, eg. yourusername.mysql.pythonanywhere-services.com', 3306)
-# ) as tunnel:
-#     connection = MySQLdb.connect(
-#         user='your PythonAnywhere database username',
-#         passwd='your PythonAnywhere database password',
-#         host='127.0.0.1', port=tunnel.local_bind_port,
-#         db='your database name, eg yourusername$mydatabase',
-#     )
-#     # Do stuff
-#     connection.close()
 
 
 
@@ -43,18 +56,14 @@ def about():
 @app.route("/register", methods=['POST', 'GET'])
 def register():
     if request.method == 'POST':
-        client = 'Test Test'
+        firstname = 'Test Test'
+        lastname = 'Test Test'
         email = 'test@test.com'
         package = 'albanian holiday'
-        phone = '555 55555555'
-
-        # data = Bookings(client=client, email=email, package=package, phone=phone)
-        try:
-            # db.session.add(data)
-            # db.session.commit()
-            return render_template("highlights.html")
-        except:
-            return render_template("highlights.html")
+        phone_number = '555 55555555'
+        # mydb.execute("SELECT * FROM bookings")
+        # mydb.execute("INSERT INTO users (firstname, lastname, email , package, phone_number) VALUES(?, ?, ?, ?, ?)", firstname, lastname, email, package, phone_number )
+        return render_template("highlights.html")
     else:    
         return render_template("register.html")
 
@@ -69,9 +78,6 @@ def highlights():
 @app.route("/walking")
 def walking():
     return render_template("walking.html")
-# @app.route("/path")
-# def test():
-# return redirect(url_for("movie", var=varMew))
 
 
 if __name__ == "__main__":
