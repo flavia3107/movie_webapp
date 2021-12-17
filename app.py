@@ -73,11 +73,11 @@ def about():
 @app.route("/register", methods=['POST', 'GET'])
 def register():
     if request.method == 'POST':
-        firstname = 'Test Test'
-        lastname = 'Test Test'
-        email = 'test@test.com'
-        package = 'albanian holiday'
-        phone_number = '555 55555555'
+        firstname = request.form.get("firstname")
+        lastname = request.form.get("lastname")
+        email = request.form.get("email")
+        package = request.form.get("travel")
+        phone_number = request.form.get("phone")
    
         cursor.execute("INSERT INTO bookings (firstname, lastname, email , package, phone_number) VALUES(%s, %s, %s, %s, %s)",( firstname, lastname, email, package, phone_number ))
         cnx.commit()
