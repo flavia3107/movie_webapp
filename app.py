@@ -1,7 +1,8 @@
 from flask import Flask, render_template, request, redirect
 from datetime import datetime
+from mysql.connector import connect, Error
 import mysql.connector
-from mysql.connector import errorcode
+
 
 # import MySQLdb
 # import sshtunnel
@@ -9,21 +10,21 @@ from mysql.connector import errorcode
 app = Flask(__name__)
 app.config['PROPAGATE_EXCEPTIONS'] = True
 
-try:
-    mydb = mysql.connector.connect( 
-        user="sql11459575",
-        password="8RWAvpjBuH",
-        host="sql11.freemysqlhosting.net",
-        port=3306,
-        database="sql11459575"
-    )
-except mysql.connector.Error as err:
-  if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
-    print("Something is wrong with your user name or password")
-  elif err.errno == errorcode.ER_BAD_DB_ERROR:
-    print("Database does not exist")
-  else:
-    print(err)
+# try:
+#     mydb = mysql.connector.connect( 
+#         user="sql11459575",
+#         password="8RWAvpjBuH",
+#         host="sql11.freemysqlhosting.net",
+#         port=3306,
+#         database="sql11459575"
+#     )
+# except mysql.connector.Error as err:
+#   if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
+#     print("Something is wrong with your user name or password")
+#   elif err.errno == errorcode.ER_BAD_DB_ERROR:
+#     print("Database does not exist")
+#   else:
+#     print(err)
 # else:
 #   mydb.close()
 
@@ -36,6 +37,22 @@ except mysql.connector.Error as err:
 #  `phone_number` text NOT NULL
 # ) ENGINE=InnoDB DEFAULT CHARSET=latin1
 
+
+cnx = mysql.connector.connect(user ='sql11459575', password= '8RWAvpjBuH', host = 'sql11.freemysqlhosting.net',port='3306', database='sql11459575')
+
+cursor = cnx.cursor()
+
+
+# try:
+#     with connect(
+#         host="sql11.freemysqlhosting.net",
+#          user="sql11459575",
+#         password="8RWAvpjBuH",
+#           database="sql11459575"
+#     ) as connection:
+#         print(connection)
+# except Error as e:
+#     print(e)
 
 
 
@@ -61,8 +78,9 @@ def register():
         email = 'test@test.com'
         package = 'albanian holiday'
         phone_number = '555 55555555'
-        # mydb.execute("SELECT * FROM bookings")
-        # mydb.execute("INSERT INTO users (firstname, lastname, email , package, phone_number) VALUES(?, ?, ?, ?, ?)", firstname, lastname, email, package, phone_number )
+   
+        cursor.execute("INSERT INTO bookings (firstname, lastname, email , package, phone_number) VALUES(%s, %s, %s, %s, %s)",( firstname, lastname, email, package, phone_number ))
+        cnx.commit()
         return render_template("highlights.html")
     else:    
         return render_template("register.html")
