@@ -81,7 +81,7 @@ def register():
    
         cursor.execute("INSERT INTO bookings (firstname, lastname, email , package, phone_number) VALUES(%s, %s, %s, %s, %s)",( firstname, lastname, email, package, phone_number ))
         cnx.commit()
-        return render_template("highlights.html")
+        return render_template("index.html")
     else:    
         return render_template("register.html")
 
